@@ -2,6 +2,4 @@ def factorial(n):
     if n == 0:
         return 1
     else:
-        recurse = factotial(n-1)
-        result = n * recurse
-        return result
+        return n*factorial(n-1)
