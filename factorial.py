@@ -1,7 +1,11 @@
 def factorial(n):
-    if n == 0:
+    if not isinstance(n, int):
+        print "Factorial is only defined for integers."
+        return -1
+    elif n < 0:
+        print "Factorial is only defined for positive intergers."
+        return -1
+    elif n == 1:
         return 1
     else:
-        recurse = factotial(n-1)
-        result = n * recurse
-        return result
+        return n * factorial(n-1)
