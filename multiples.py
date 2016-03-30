@@ -1,10 +1,24 @@
-def printMultiples(n):
+def printMultiples(num, column): 
     i = 1
-    while i <= 9:
-        print n*i, "\t",  # Why do we need the comma?
+    while i <= column:
+        print num*i, "\t ",
         i = i+1
     print
-i = 1
-while i <= 9:
-    printMultiples(i)
-    i = i+1
+
+def printTable(column):
+    i = 1
+    printMultiples(1, column)
+    i = i + 1
+    while 1 < i <= column:
+        printMultiples(i, i)
+        i = i + 1
+        
+printTable(8)
+#1 		2 		3 		4 		5 		6 		7 		8 		
+#2 		4 		
+#3 		6 		9 		
+#4 		8 		12 		16 		
+#5 		10 		15 		20 		25 		
+#6 		12 		18 		24 		30 		36 		
+#7 		14 		21 		28 		35 		42 		49 		
+#8 		16 		24 		32 		40 		48 		56 		64 	
